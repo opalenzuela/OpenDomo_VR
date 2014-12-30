@@ -193,7 +193,12 @@ cp generate_port_data_$IDIOMA.sh generate_port_data.sh
 #When running the voice recognition, opendomoVR.sh will check if this file exists, if not, it will run automatically the #setup, with default parameter.
 #
 #echo "Create SETUPDONE file, to indicate setup has been already performed"
+
+CFGFILE="/etc/opendomo/speech/espeak.conf"
+
 touch $CONFIGDIR/SETUPDONE
 echo "#INFO System successfully configured"
-echo "#INFO Now you can start Voice Recognition issuing a voice identification command (usually something like:HOLA OPENDOMO)"
-
+#echo "#INFO Now you can start Voice Recognition issuing a voice identification command (usually something like:HOLA OPENDOMO)"
+source $CFGFILE
+/usr/local/opendomo/eventhandlers/speak.sh odspeech notice $PRESENTATION
+echo 
