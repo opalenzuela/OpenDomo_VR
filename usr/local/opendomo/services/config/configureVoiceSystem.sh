@@ -168,6 +168,8 @@ cp Recognition/config/defaultMain.dic Recognition/modes/main.dic
 #./installDefault
 cd /usr/local/opendomo/vr
 cp generate_port_data_$IDIOMA.sh generate_port_data.sh
+cp oldfiles/plugins ./plugins
+chmod +x plugins
 ./plugins -f -i /usr/local/opendomo/voiceCommands/$IDIOMA/OpenDomo_start/OpenDomo_start.sp
 ./plugins -f -i /usr/local/opendomo/voiceCommands/$IDIOMA/OpenDomo_stop/OpenDomo_stop.sp
 ./plugins -f -i /usr/local/opendomo/voiceCommands/$IDIOMA/LucesON/LucesON.sp
