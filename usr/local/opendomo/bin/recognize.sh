@@ -26,9 +26,8 @@ function run_command() {
     eval "./Recognition/bin/$1"
 
     if [ $? != 0 ];then
-	./Recognition/bin/result Error "There was an error while running:" \
-	"$1" ""
-	exit 1
+		logevent error odspeech "There was an error while running $1"
+		exit 1
     fi
 }
 

@@ -53,7 +53,7 @@ then
 		read resultado < RESULTADO
 		if [ "$resultado" == "NOK" ]
 		then
-			/usr/local/opendomo/bin/espeak.sh "NoEntendido"
+			logevent error odspeech "Message not understood"
      		fi
 	fi
 fi
