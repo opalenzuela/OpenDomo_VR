@@ -202,5 +202,5 @@ touch $CONFIGDIR/SETUPDONE
 echo "#INFO System successfully configured"
 #echo "#INFO Now you can start Voice Recognition issuing a voice identification command (usually something like:HOLA OPENDOMO)"
 source $CFGFILE
-/usr/local/opendomo/eventhandlers/speak.sh odspeech notice $PRESENTATION
+/usr/local/opendomo/eventhandlers/speak.sh odspeech notice "$PRESENTATION"  2>/dev/null
 echo 
