@@ -46,7 +46,9 @@ SCRIPTNAME=/usr/local/opendomo/daemons/voiceSystem.sh
 #
 do_start()
 {
+
 	echo "Running" > $PIDFILE
+	amixer set 'Mic' unmute 2>/dev/null >/dev/null
 	$DAEMON & 
 }
 
