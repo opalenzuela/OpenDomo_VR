@@ -9,4 +9,4 @@ source $CFGFILE
 
 TEXT=`i18n.sh "$3"`
 		
-/usr/bin/espeak $PARAMS "$TEXT"
+/usr/bin/espeak $PARAMS "$TEXT" --stdout | aplay
