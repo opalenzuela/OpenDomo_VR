@@ -166,8 +166,8 @@ cp Recognition/config/defaultMain.dic Recognition/modes/main.dic
 
 # Next command is not necessary, as all the commands will be explicitly installed using plugins commands  
 #./installDefault
-cd /usr/local/opendomo/vr
-cp generate_port_data_$IDIOMA.sh generate_port_data.sh
+cp /usr/local/opendomo/bin/generate_port_data_$IDIOMA.sh /usr/local/opendomo/bin/generate_port_data.sh
+cd /usr/local/opendomo/vr/
 cp oldfiles/plugins ./plugins
 chmod +x plugins
 ./plugins -f -i /usr/local/opendomo/voiceCommands/$IDIOMA/OpenDomo_start/OpenDomo_start.sp
@@ -202,5 +202,5 @@ touch $CONFIGDIR/SETUPDONE
 echo "#INFO System successfully configured"
 #echo "#INFO Now you can start Voice Recognition issuing a voice identification command (usually something like:HOLA OPENDOMO)"
 source $CFGFILE
-/usr/local/opendomo/eventhandlers/speak.sh odspeech notice "$PRESENTATION"  2>/dev/null
+/usr/local/opendomo/eventhandlers/speak.sh odspeech notice "$PRESENTATION"
 echo 
